@@ -1,0 +1,17 @@
+<p>list-fournisseur-component works!</p>
+
+<div>
+    <tr *ngFor="let fournisseur of list">
+        <fieldset [style]="{'background-color': fournisseur.libelle === 'hp' ? 'green' : 'yellow'}" (dblclick)="deleteFournisseur(fournisseur)">
+            <fieldset [ngStyle]="{'background-color': getColor(fournisseur.code)}">
+        <td *ngIf="fournisseur.idFournisseur <= 100">
+    <div>IdFournisseur:{{fournisseur.idFournisseur}}</div>
+    <div [ngStyle]="{'font-weight': isBold(fournisseur.code) ? 'bold' : 'normal'}">Code:{{fournisseur.code}}</div>
+    <div>Libelle:{{fournisseur.libelle}}</div>
+    <hr>
+</td>
+
+</fieldset>
+</fieldset>
+</tr>
+</div>
